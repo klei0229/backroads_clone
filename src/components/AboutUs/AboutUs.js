@@ -18,7 +18,13 @@ const AboutUs = () => {
           <h3>{subheading1}</h3>
 
           {paragraph.split("&nbsp;").map((line) => {
-            return <p>{line}</p>;
+            return (
+              <p>
+                {line}
+                <br />
+                <br />
+              </p>
+            );
           })}
           <button>Read More</button>
         </div>

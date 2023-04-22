@@ -6,11 +6,9 @@ const Service = (props) => {
 
   return (
     <div className="service-card">
-      <i className={img}></i>
-      <div className="service-card-content">
+        <i className={img}></i>
         <h3>{heading}</h3>
         <p>{description}</p>
-      </div>
     </div>
   );
 };
