@@ -1,4 +1,5 @@
 import logo from "../../images/backroads-logo.svg";
+
 const links = [
   { name: "Home", link: "#home" },
   { name: "About", link: "#about" },
@@ -6,20 +7,19 @@ const links = [
   { name: "Tours", link: "#tours" },
 ];
 const socials = [
-  { name: "facebook", link: "https://facebook.com", icon: "" },
-  { name: "twitter", link: "https://twitter.com", icon: "" },
-  { name: "sqaure", link: "https://squarespace", icon: "" },
+  { name: "facebook", link: "https://facebook.com", icon: "fab fa-facebook" },
+  { name: "twitter", link: "https://twitter.com", icon: "fab fa-twitter" },
+  { name: "sqaure", link: "https://squarespace", icon: "fab fa-squarespace" },
 ];
 
 const Navbar = () => {
   return (
-    <>
-      <h1>Navbar</h1>
+    <div className='navbar'>
       {/* LOGO */}
       <img src={logo} />
 
       {/* LINKS */}
-      <ul>
+      <ul className='links'>
         {links.map((link) => {
           return (
             <li>
@@ -30,18 +30,20 @@ const Navbar = () => {
       </ul>
 
       {/* Socials */}
-      <ul>
+      <ul className='socials'>
         {socials.map((social) => {
           return (
             <li>
               <a href={social.link}>
-                <img src={logo} />
+                {/* <img src={logo} /> */}
+                {<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>}
+                <i className={social.icon}></i>
               </a>
             </li>
           );
         })}
       </ul>
-    </>
+    </div>
   );
 };
 

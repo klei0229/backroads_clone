@@ -1,15 +1,18 @@
-import React from 'react'
+import React from "react";
 
 const Service = (props) => {
-    const {heading,description,img} = props.service
-    console.log(props)
+  const { heading, description, img } = props.service;
+  console.log(props);
 
   return (
-    <div>
-        <h1>{heading}</h1>
+    <div className="service-card">
+      <i className={img}></i>
+      <div className="service-card-content">
+        <h3>{heading}</h3>
         <p>{description}</p>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Service
+export default Service;
